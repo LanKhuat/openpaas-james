@@ -13,3 +13,21 @@ This project adapts and enhance [Apache James project](https://james.apache.org)
 Additional features includes:
  - JMAP PUSH over AMQP (WIP)
  - JMAP Filters/get and Filters/set (WIP)
+
+## Building the project
+
+This projects uses git submodules to track the latest branch of [the Apache James project](https://james.apache.org)
+
+You need to retrieve Apache sources first:
+
+```
+cd james-project
+git fetch
+git checkout master
+```
+
+Then you can compile both `apache/james-project` and `linagora/openpaas-james` together.
+
+```
+mvn clean package -Dmaven.javadoc.skip=true
+```
